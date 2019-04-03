@@ -1,0 +1,27 @@
+body {
+    @include light;
+    color: $text-color;
+}
+
+.button-o {
+    border: 2px solid $primary;
+    background-color: transparent;
+    color: $primary;
+    cursor: pointer;
+    font-size: 12px;
+    @include bold;
+    padding: 17px 22px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.button {
+    padding: 25px 45px;
+    text-transform: uppercase;
+    border: none;
+    background-color: $primary;
+    color: #fff;
+    @include bold;
+    outline: none;
+    cursor: pointer;
+}
