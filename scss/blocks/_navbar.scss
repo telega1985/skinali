@@ -8,7 +8,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 80px;
     }
     &--mobile,
     &--landline {
@@ -36,7 +35,7 @@
     padding: 16px 0;
     width: 100%;
     background-color: $primary;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     transition: .2s;
     &-active {
         transform: translateY(0);
@@ -44,6 +43,7 @@
     &--nav {
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
     &--link {
         text-decoration: none;
@@ -87,3 +87,58 @@
         color: $text-color-light;
     }
 }
+
+@media (max-width: 991px) {
+    .navbar {
+        &--mobile,
+        &--landline {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        display: none;
+    }
+    .menu {
+        top: 60px;
+        &-button {
+            height: 60px;
+        }
+        &--nav {
+            flex-direction: column;
+        }
+        &--link {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

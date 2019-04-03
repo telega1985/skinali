@@ -11,6 +11,22 @@
   margin: auto;
 }
 
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
 /* Настройки шрифтов */
 @font-face {
   font-family: 'Proxima Nova Semibold';
@@ -56,6 +72,11 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 576px) {
+  .button-o {
+    font-size: 10px;
+  }
+}
 /* Шапка сайта */
 .navbar {
   position: fixed;
@@ -68,7 +89,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
 }
 .navbar--mobile, .navbar--landline {
   text-align: right;
@@ -94,7 +114,7 @@ body {
   padding: 16px 0;
   width: 100%;
   background-color: #507fe1;
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   transition: .2s;
 }
 .menu-active {
@@ -103,6 +123,7 @@ body {
 .menu--nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .menu--link {
   text-decoration: none;
@@ -144,6 +165,29 @@ body {
   color: #7b7b79;
 }
 
+@media (max-width: 991px) {
+  .navbar--mobile, .navbar--landline {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    top: 60px;
+  }
+  .menu-button {
+    height: 60px;
+  }
+  .menu--nav {
+    flex-direction: column;
+  }
+  .menu--link {
+    margin-bottom: 20px;
+  }
+}
 /* Блок hero */
 .hero {
   background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat center top 80px;
@@ -160,6 +204,13 @@ body {
   font-size: 30px;
   margin-bottom: 67px;
   display: block;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    background-size: cover;
+    background-position: top left 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
