@@ -1,6 +1,6 @@
 .hero {
     background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat center top;
-    background-size: contain;
+    background-size: cover;
     padding: 120px 0 270px;
     margin-top: 80px;
     &--title {
