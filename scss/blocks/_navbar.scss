@@ -37,8 +37,10 @@
     background-color: $primary;
     transform: translateY(-200%);
     transition: .2s;
+    opacity: 0;
     &-active {
         transform: translateY(0);
+        opacity: 1;
     }
     &--nav {
         display: flex;

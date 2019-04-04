@@ -116,9 +116,11 @@ body {
   background-color: #507fe1;
   transform: translateY(-200%);
   transition: .2s;
+  opacity: 0;
 }
 .menu-active {
   transform: translateY(0);
+  opacity: 1;
 }
 .menu--nav {
   display: flex;
@@ -190,9 +192,10 @@ body {
 }
 /* Блок hero */
 .hero {
-  background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat center top 80px;
+  background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat center top;
   background-size: contain;
-  padding: 160px 0 270px;
+  padding: 120px 0 270px;
+  margin-top: 80px;
 }
 .hero--title {
   font-size: 30px;
@@ -208,8 +211,8 @@ body {
 
 @media (max-width: 991px) {
   .hero {
-    background-size: cover;
-    background-position: top left 30%;
+    background-size: 100%;
+    background-position: top right;
   }
 }
 
