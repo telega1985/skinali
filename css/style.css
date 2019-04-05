@@ -49,6 +49,10 @@ body {
   color: #262626;
 }
 
+img {
+  max-width: 100%;
+}
+
 .section {
   padding: 100px 0;
 }
@@ -83,6 +87,27 @@ body {
   font-family: 'Proxima Nova Semibold', sans-serif;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
+}
+.button-fitting, .button-add, .button-like {
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: #507fe1;
+  cursor: pointer;
+  font-size: 11px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+.button-add {
+  background-color: #7c9fe8;
+  color: #fff;
+}
+.button-like {
+  background-color: #507fe1;
+  width: 30px;
+  padding: 0;
 }
 
 .bg-secondary {
@@ -136,6 +161,7 @@ body {
   top: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 99;
 }
 .navbar-wrap {
   display: flex;
@@ -383,6 +409,106 @@ body {
   .features--block-item {
     flex-basis: 100%;
     margin-bottom: 50px;
+  }
+}
+/* Блок catalog */
+.catalog {
+  background-color: #f5f6f8;
+}
+.catalog--block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.catalog--card {
+  max-width: 570px;
+  height: 130px;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+}
+.catalog--card-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.catalog--card-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: rgba(80, 127, 225, 0.6);
+  color: #fff;
+  padding: 10px;
+}
+.catalog--link {
+  text-align: center;
+  margin-top: 60px;
+}
+.catalog--link-more {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.catalog--description {
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .catalog--block {
+    justify-content: center;
+  }
+  .catalog--card {
+    max-width: 470px;
+  }
+}
+@media (max-width: 991px) {
+  .catalog--card {
+    max-width: 100%;
+  }
+}
+/* Блок blog-list */
+.blog-card {
+  margin-bottom: 20px;
+}
+.blog--heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.blog--title {
+  font-size: 24px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+.blog--link-more {
+  color: #507fe1;
+}
+.blog--list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.blog--list-card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+.blog--list-image {
+  height: 200px;
+  overflow: hidden;
+}
+.blog--list-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+@media (max-width: 1199px) {
+  .blog--list {
+    justify-content: space-around;
+  }
+  .blog--list-card {
+    margin: 30px;
   }
 }
 

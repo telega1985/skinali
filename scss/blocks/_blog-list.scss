@@ -1,0 +1,46 @@
+.blog {
+    &-card {
+        margin-bottom: 20px;
+    }
+    &--heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+    &--title {
+        font-size: 24px;
+        @include bold;
+    }
+    &--link-more {
+        color: $primary;
+    }
+    &--list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-card {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .08);
+        }
+        &-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        &-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .blog {
+        &--list {
+            justify-content: space-around;
+            &-card {
+                margin: 30px;
+            }
+        }
+    }
+}

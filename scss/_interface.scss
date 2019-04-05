@@ -3,6 +3,10 @@ body {
     color: $text-color;
 }
 
+img {
+    max-width: 100%;
+}
+
 .section {
     padding: 100px 0;
     &-title {
@@ -37,6 +41,29 @@ body {
     @include bold;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
+    &-fitting,
+    &-add,
+    &-like {
+        padding: 0 10px;
+        text-transform: uppercase;
+        color: $primary;
+        cursor: pointer;
+        font-size: 11px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        height: 30px;
+    }
+    &-add {
+        background-color: lighten($primary, 10%);
+        color: #fff;
+    }
+    &-like {
+        background-color: $primary;
+        width: 30px;
+        padding: 0;
+    }
 }
 
 .bg-secondary {
