@@ -1,0 +1,38 @@
+.features {
+    padding-bottom: 0;
+    &--block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &-item {
+            flex-basis: 33%;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        &-text {
+            max-width: 125px;
+            margin: 25px auto 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .features {
+        &--block {
+            &-item {
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        &--block {
+            &-item {
+                flex-basis: 100%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
