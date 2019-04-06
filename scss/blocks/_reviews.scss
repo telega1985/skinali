@@ -1,0 +1,43 @@
+.reviews {
+    background-color: #f5f6f8;
+    padding-bottom: 235px;
+    &--slider {
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            text-align: center;
+        }
+        &-image {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #6a99e9;
+            border-radius: 50%;
+            display: block;
+            margin: 30px auto 20px;
+        }
+        &-text {
+            font-size: 15px;
+            font-style: italic;
+            max-width: 370px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                border: 20px solid transparent;
+                border-top: 20px solid #fff;
+                position: absolute;
+                left: 50%;
+                bottom: -30px;
+                transform: translateX(-50%);
+            }
+        }
+        &-name,
+        &-city {
+            font-size: 14px;
+            display: block;
+        }
+    }
+}
