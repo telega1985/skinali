@@ -567,7 +567,7 @@ img {
   bottom: -90px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .price {
     padding-top: 0;
   }
@@ -576,6 +576,60 @@ img {
   }
   .price--block-card {
     margin: 20px;
+  }
+}
+/* Блок steps */
+.steps {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.steps--block {
+  position: relative;
+}
+.steps--block:before {
+  content: "";
+  width: 85%;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.9);
+  display: block;
+  position: absolute;
+  top: 28%;
+  left: 85px;
+}
+.steps--block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.steps--block-step {
+  position: relative;
+  max-width: 162px;
+}
+.steps--block-title {
+  font-size: 18px;
+  margin: 25px 0;
+}
+.steps--block-text {
+  font-size: 14px;
+}
+
+@media (max-width: 1199px) {
+  .steps--block-step {
+    margin-bottom: 30px;
+  }
+  .steps--block:before {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .steps--block-step {
+    max-width: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .steps--block-step {
+    max-width: 100%;
+    margin: 0 auto 30px;
   }
 }
 
