@@ -742,5 +742,32 @@ img {
     flex-basis: 100%;
   }
 }
+/* Блок contacts */
+.contacts {
+  background-color: #fafbfc;
+}
+.contacts--block {
+  display: flex;
+  justify-content: space-around;
+}
+.contacts--block-item {
+  text-align: center;
+}
+.contacts--block-text {
+  margin-top: 25px;
+}
+.contacts--block-text a {
+  text-decoration: none;
+  color: #262626;
+}
+
+@media (max-width: 576px) {
+  .contacts--block {
+    flex-wrap: wrap;
+  }
+  .contacts--block-item {
+    margin-bottom: 20px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
