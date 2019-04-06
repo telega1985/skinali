@@ -80,6 +80,7 @@
             &-checkbox {
                 flex-direction: row;
                 margin-bottom: 40px;
+                flex-wrap: wrap;
             }
         }
         &--group {
@@ -88,6 +89,20 @@
         &--input {
             border-right: 1px solid #ddd;
             margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .form {
+        &--checkbox {
+            margin-bottom: 20px;
+        }
+        &--row {
+            margin-bottom: 0;
+            &-checkbox {
+                margin-bottom: 0;
+            }
         }
     }
 }

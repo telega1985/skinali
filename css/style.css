@@ -142,7 +142,8 @@ img {
 }
 
 @media (max-width: 576px) {
-  .button-o {
+  .button-o,
+  .button {
     font-size: 10px;
   }
 
@@ -372,6 +373,7 @@ img {
   .form--row-checkbox {
     flex-direction: row;
     margin-bottom: 40px;
+    flex-wrap: wrap;
   }
   .form--group {
     width: 100%;
@@ -379,6 +381,17 @@ img {
   .form--input {
     border-right: 1px solid #ddd;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .form--checkbox {
+    margin-bottom: 20px;
+  }
+  .form--row {
+    margin-bottom: 0;
+  }
+  .form--row-checkbox {
+    margin-bottom: 0;
   }
 }
 /* Блок features */
@@ -509,6 +522,60 @@ img {
   }
   .blog--list-card {
     margin: 30px;
+  }
+}
+/* Блок price */
+.price--block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.price--block-card {
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #fff;
+}
+.price--card-image img {
+  display: block;
+}
+.price--card-text {
+  font-size: 15px;
+  padding: 20px;
+}
+.price--card-pricetag {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.price--card-cost {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+.price--card-button {
+  text-align: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  z-index: -1;
+  background-color: #fff;
+}
+.price--card:hover .price--card-button {
+  z-index: 1;
+  bottom: -90px;
+}
+
+@media (max-width: 991px) {
+  .price {
+    padding-top: 0;
+  }
+  .price--block {
+    justify-content: center;
+  }
+  .price--block-card {
+    margin: 20px;
   }
 }
 
