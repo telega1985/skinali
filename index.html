@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Мебель скинали</title>
 </head>
@@ -46,7 +47,7 @@
                         <a class="navbar--phone" href="tel:+79121234567">+7 912 123-45-67</a>
                         <a class="navbar--email navbar--small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                     </div>
-                    <button class="button-o navbar--button">Получить консультацию</button>
+                    <a href="#offer" class="button-o navbar--button">Получить консультацию</a>
                 </div>
             </div>
         </div>
@@ -55,7 +56,7 @@
             <div class="container">
                 <h1 class="hero--title">Гарантия минимальной цены на скинали</h1>
                 <span class="hero--subtitle">от 3000 р/м2</span>
-                <button class="button hero--button">Заказать скинали</button>
+                <a href="#offer--block" class="button hero--button">Заказать скинали</a>
             </div>
         </div>
         <!-- /.hero -->
@@ -65,7 +66,7 @@
     <main>
         <section class="offer bg-secondary">
             <div class="container">
-                <div class="offer--block offer-block offer-block-calc-bg">
+                <div class="offer--block offer-block offer-block-calc-bg" id="offer">
                     <h2 class="offer--title">Оставьте заявку на расчет</h2>
                     <span class="offer--subtitle">
                         и получите скидку 30% на изготовление скинали или фартука для кухни
@@ -73,11 +74,15 @@
                     <form action="#" method="post" class="form offer--form">
                         <div class="form--row">
                             <div class="form--group">
-                                <label for="" class="form--label">Вид стекла</label>
-                                <select class="input form--input">
-                                    <option value="1">С печатью</option>
-                                    <option value="2">Без печати</option>
-                                </select>
+                                <label class="form--label">Вид стекла</label>
+                                <input type="hidden" name="type" id="select-type">
+                                <div class="form--select input form--input">
+                                    <div class="form--select-checked">С печатью</div>
+                                    <ul class="form--select-dropdown">
+                                        <li data-value="С печатью">С печатью</li>
+                                        <li data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form--group">
                                 <label for="" class="form--label">Ширина, см</label>
@@ -454,6 +459,31 @@
             </div>
         </section>
         <!-- /.steps -->
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section--title">До и после</h2>
+                <div class="before--slider">
+                    <div class="before--slider-item">
+                        <div class="before--after">
+                            <img src="images/before.jpg" alt="Before">
+                            <img src="images/after.jpg" alt="After">
+                        </div>
+                    </div>
+                    <div class="before--slider-item">
+                        <div class="before--after">
+                            <img src="images/before.jpg" alt="Before">
+                            <img src="images/after.jpg" alt="After">
+                        </div>
+                    </div>
+                    <div class="before--slider-item">
+                        <div class="before--after">
+                            <img src="images/before.jpg" alt="Before">
+                            <img src="images/after.jpg" alt="After">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section reviews">
             <div class="container">
                 <h2 class="section-title section--title">Отзывы наших клиентов</h2>
@@ -482,13 +512,21 @@
                         <span class="reviews--slider-name">Екатерина Иванова</span>
                         <span class="reviews--slider-city">Москва</span>
                     </div>
+                    <div class="reviews--slider-item">
+                        <div class="reviews--slider-text">
+                            Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. У Банка очень много способов погашения, и удобное мобильное приложение.
+                        </div>
+                        <img src="images/review-1.png" alt="Отзыв 1" class="reviews--slider-image">
+                        <span class="reviews--slider-name">Екатерина Иванова</span>
+                        <span class="reviews--slider-city">Москва</span>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- /.reviews -->
         <section class="offer">
             <div class="container">
-                <div class="offer--block offer-block offer-block-price-bg">
+                <div class="offer--block offer-block offer-block-price-bg" id="offer--block">
                     <h2 class="offer--title">Ищите где дешевле и лучше?</h2>
                     <span class="offer--subtitle">
                         Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле, укажите ее - и мы вам пересчитаем заказ с максимальной скидкой
@@ -618,6 +656,10 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <!--  Подключение виджета обратной связи через соцсети  -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=594"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 </html>

@@ -1,6 +1,12 @@
 /* Базовые настройки сетки */
 @import "grid";
 
+/* Базовые настройки slick */
+@import "slick";
+
+/* Базовые настройки slick-theme */
+@import "slick-theme";
+
 /* Настройки шрифтов */
 @import "fonts";
 
@@ -48,3 +54,6 @@
 
 /* Блок footer */
 @import "blocks/footer";
+
+/* Блок before */
+@import "blocks/before";

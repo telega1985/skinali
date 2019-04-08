@@ -58,6 +58,60 @@
         width: 100%;
         border-right: none;
     }
+    &--select {
+        position: relative;
+        cursor: pointer;
+        &:after {
+            content: "";
+            background: url(../images/select-arrow.png) no-repeat;
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            right: 19px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .2s;
+        }
+        &-open {
+            &:after {
+                transform: rotate(180deg) translateY(3px);
+            }
+        }
+        &-checked {
+            font-size: 15px;
+            line-height: 80px;
+        }
+        &-dropdown {
+            position: absolute;
+            list-style: none;
+            font-size: 15px;
+            top: 79px;
+            border: 1px solid #ddd;
+            border-top: none;
+            left: -1px;
+            width: 100.4%;
+            background-color: #fff;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: .2s;
+            &-open {
+                height: auto;
+                opacity: 1;
+            }
+            li {
+                padding: 20px 0 20px 30px;
+                border-bottom: 1px solid #ddd;
+                cursor: pointer;
+                &:last-child {
+                    border: none;
+                }
+                &:hover {
+                    background-color: $bg-secondary;
+                }
+            }
+        }
+    }
     &--border {
         border-right: 1px solid #ddd;
     }

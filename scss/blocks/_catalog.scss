@@ -11,11 +11,21 @@
         position: relative;
         margin-bottom: 30px;
         box-shadow: 7px 5px 21px rgba(0, 0, 0, .1);
+        overflow: hidden;
+        &:hover {
+            .catalog--card-buttons {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
         &-buttons {
             display: flex;
             position: absolute;
             bottom: 0;
             right: 0;
+            transition: .2s;
+            transform: translateY(100%);
+            opacity: 0;
         }
         &-tag {
             position: absolute;

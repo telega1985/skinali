@@ -1,0 +1,82 @@
+.before {
+    &--after {
+        .twentytwenty-before-label:before,
+        .twentytwenty-after-label:before {
+            margin-top: 0;
+            top: 0;
+            text-transform: uppercase;
+            @include bold;
+            line-height: 12px;
+            padding: 9px;
+            border-radius: 0;
+            background: rgba(75, 72, 69, .5);
+        }
+        .twentytwenty-before-label:before {
+            left: 0;
+        }
+        .twentytwenty-after-label:before {
+            right: 0;
+        }
+    }
+    &--slider {
+        max-width: 640px;
+        margin: auto;
+        &-dots {
+            bottom: -35px;
+            li {
+                margin: 0 -3px;
+            }
+            li.slick-active button:before {
+                color: $primary;
+                opacity: 1;
+            }
+            li button:before {
+                font-size: 8px;
+                opacity: 1;
+                color: #d1d1d1;
+            }
+        }
+    }
+    &--arrow {
+        &-left,
+        &-right {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            img {
+                display: block;
+            }
+        }
+        &-left {
+            right: calc(100% + 55px);
+        }
+        &-right {
+            left: calc(100% + 55px);
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    .before {
+        &--arrow {
+            &-left,
+            &-right {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .before {
+        padding-bottom: 30px;
+    }
+}
+
+
